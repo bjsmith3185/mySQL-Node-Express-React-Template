@@ -6,14 +6,13 @@ module.exports = {
     return db.MyModel
       .findAll({})
   },
-  // findByCompany: function (company) {
-  //   return db.Advertisements
-  //     .find({ company: company })
-  // },
-  // create: function (data) {
-  //   return db.Advertisements
-  //     .create(data)
-  // },
+  
+  create: function (data) {
+    console.log("in the controller")
+    return db.MyModel
+      .create(data)
+  },
+  
   // update: function (company, data) {
   //   return db.Advertisements
   //     .findOneAndUpdate({ company: company }, data, {upsert: true})

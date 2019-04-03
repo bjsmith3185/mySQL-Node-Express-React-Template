@@ -1,10 +1,12 @@
 const modelController = require("../controllers/modelController");
 
 module.exports = {
-  doSomething: function() {
+  doSomething: function(data) {
     return new Promise((resolve, reject) => {
+      console.log("in midddleware")
+      console.log(data)
       modelController
-        .findAll()
+        .create(data)
         .then(dbresults => {
           resolve(dbresults);
         })
@@ -12,3 +14,18 @@ module.exports = {
     });
   }
 };
+
+
+
+// doSomething: function(data) {
+//   return new Promise((resolve, reject) => {
+//     console.log("in midddleware")
+//     console.log(data)
+//     modelController
+//       .findAll()
+//       .then(dbresults => {
+//         resolve(dbresults);
+//       })
+//       .catch(err => console.log(err));
+//   });
+// }
