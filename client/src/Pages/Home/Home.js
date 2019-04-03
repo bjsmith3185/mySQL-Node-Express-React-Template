@@ -55,7 +55,7 @@ class Home extends Component {
         <Nav />
         <br />
         <div className="admin-header">
-          <h1 className="home-h1">Welcome to MERN Template</h1>
+          <h1 className="home-h1">Welcome to MySQL-ERN STack Template</h1>
         </div>
         <form>
           <div> enter a name</div>
